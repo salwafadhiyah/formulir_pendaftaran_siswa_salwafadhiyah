@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Input Data Siswa</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color:  #FFA3FD;
+      }
+
+      .container {
+        background-color: #E384FF;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        padding: 30px;
+        width: 500px;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      form {
+        display: grid;
+        grid-gap: 10px;
+        margin-top: 20px;
+      }
+
+      label {
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      select {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        font-size: 16px;
+        margin-top: 5px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      select {
+        appearance: none;
+        background-image: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-512.png");
+        background-position: right 10px center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        cursor: pointer;
+      }
+
+      input[type="submit"] {
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Input Data Siswa</h1>
+      <div class="form">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="nis">NIS</label>
+        <input type="number" id="nis" name="email" required />
+
+        <label for="Mata Pelajaran">Mata Pelajaran</label>
+        <input type="text" id="mapel" name="mapel" required />
+
+        </select>
+
+        <label for="nohp">No Hp</label>
+        <input type="number" id="nohp" name="nohp" required />
+
+        <input type="submit" value="Simpan" onclick="setOutput()"/>
+
+        
+    </div>
+    </div>
+    <h1 id="output"></h1>
+    <script>
+        function setOutput() {
+            const nama = document.getElementById('nama')
+            const nis = document.getElementById('nis')
+            const mapel = document.getElementById('mapel')
+            const nohp = document.getElementById('nohp')
+            const output = document.getElementById('output')
+            output.innerHTML = nama.value + ' ' + nis.value + ' ' + mapel.value + ' ' + nohp.value  
+        }
+
+    </script>
+  </body>
+</html>
